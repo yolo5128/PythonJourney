@@ -16,9 +16,13 @@ print()
 
 while guess != chosen_number:
     guess = input("Guess a number between 1 and 10: ")
-    if not guess.isdigit():
-        print("Please enter a valid number.")
+
+    try:
+        guess = int(guess)
+    except ValueError:
+        print("Invalid Input please enter integers only.")
         continue
+
     if guess < chosen_number:
         print(f"{guess} is too low. Try again!")
     elif guess > chosen_number:
