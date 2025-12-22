@@ -12,6 +12,6 @@ phone_number = input("Enter your Phone Number: ")
 # result = name.isdigit()
 # result = name.isalpha()
 # result = phone_number.count("-")
-result = phone_number.replace("-", "")
+result = phone_number.replace("", "-")
 
 print(result)

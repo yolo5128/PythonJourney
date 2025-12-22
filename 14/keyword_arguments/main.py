@@ -1,4 +1,8 @@
 
+# Keyword arguments = an argument preceded by an indentifier
+#                     helps with readability, order of arguments dont matter
+
+
 
 def hello(greeting, title, first, last):
     print(f"{greeting} {title}{first} {last}")

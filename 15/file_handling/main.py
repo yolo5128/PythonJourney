@@ -6,8 +6,9 @@
 # "b" - Binary - Binary mode (e.g. images)
 
 
-#                   Different ways to use the default Read Method
 #---------------------------------------------------------------------------------------
+#                   Different ways to use the default Read Method
+
 #f = open('C:/Users/Meer2/Documents/GitHub/PythonJourney/15/file_handling/ran.txt')
 #print(f)
 #txt = f.read().splitlines()    turns the txt into a list
@@ -17,6 +18,7 @@
 #f.close()
 
 #                  Using the with method auto closes the file automatically
+
 #with open('C:/Users/Meer2/Documents/GitHub/PythonJourney/15/file_handling/ran.txt') as f:
 #    lines = f.read().splitlines()
 #    print(type(lines))
@@ -29,11 +31,28 @@
 #    f.write('This text has to be appended at the end')
 
 
+#------------------------------------------------------------------------------------------
 #                  Deleting Files using os import
-ran_path = "C:/Users/Meer2/Documents/GitHub/PythonJourney/15/file_handling/ran.txt"
+#import os
+#ran_path = "C:/Users/Meer2/Documents/GitHub/PythonJourney/15/file_handling/ran.txt"
 
-import os
-if os.path.exists(ran_path):
-    os.remove(ran_path)
-else:
-    print('The file does no longer exists')
+#if os.path.exists(ran_path):
+#    os.remove(ran_path)
+#else:
+#    print('The file does no longer exists')
+#------------------------------------------------------------------------------------------
+
+
+# Converting a dictionary to json
+
+import json
+
+user_dict = {
+    "name":     "admin",
+    "country":  "US",
+    "city":     "Los Angeles",
+    "desc":     "This user has heightened access."
+}
+
+with open("C:/Users/Meer2/Documents/GitHub/PythonJourney/15/file_handling/file.json", 'w', encoding='utf-8') as f:
+    json.dump(user_dict, f, ensure_ascii=False, indent=4)
